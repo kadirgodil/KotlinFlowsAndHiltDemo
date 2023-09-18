@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lahagora Practical Task</string>
+    <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_internet">No Internet</string>
+    <string name="view_all">View all</string>
+    <string name="search_here">Search here</string>
+    <string name="data_not_found">Data Not Found</string>
+</resources>
