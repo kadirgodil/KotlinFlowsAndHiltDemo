@@ -14,6 +14,9 @@ import com.example.lahagorapracticaltask.utils.NetworkHelper
 import com.example.lahagorapracticaltask.utils.SingleLiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -36,6 +39,14 @@ class HomeFragmentViewModel @Inject constructor(
                 homeFragmentRepository.getDashboardData().collect() {
                     _dashboardApiResponse.value = it
                 }
+                /**
+                 *  If using channel then use this
+                 */
+                /*CoroutineScope(Dispatchers.IO).launch {
+                    homeFragmentRepository.getDashboardDatawithChannel().collect() {
+                        _dashboardApiResponse.value = it
+                    }
+                }*/
             }
         } else {
             //no internet
